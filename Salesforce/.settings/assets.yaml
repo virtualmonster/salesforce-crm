@@ -1,0 +1,217 @@
+name: Salesforce
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /Salesforce/src
+        type: javaClasspath
+  - name: Accounts.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /Salesforce/Accounts.csv.metadata
+        type: datasetMetadata
+  - name: Accounts.csv.metadata
+  - name: 'Create Account.recdata'
+  - name: 'Create Account.recsession'
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: '/Salesforce/Create Account.recdata'
+        type: recsessionRecdata
+  - name: 'Create Account.testsuite'
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.5.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F084B50680D9A0E4CDB63037303239
+    dependencies: 
+      - path: /Salesforce/Accounts.csv
+        type: testDatapool
+      - path: '/Salesforce/Create Account.recsession'
+        type: testRecsession
+      - path: /Salesforce/esforce_com_e2b.ma
+        type: test#moeb.applicationPackage
+      - path: '/Salesforce/salesforce logins.csv'
+        type: testDatapool
+  - name: 'Create Account_1756457414724.stats'
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1756457414724
+      tags: 
+      testId: A1F084B50680D9A0E4CDB63037303239
+      testName: 'Create Account'
+    dependencies: 
+      - path: '/Salesforce/Create Account.testsuite'
+        type: statsSessionTest
+      - path: '/Salesforce/Create Account_1756457414724.xmoebreport'
+        type: statsSessionAsset
+      - path: '/Salesforce/Create Account_1756457414724_orch!system.mstats'
+        type: statsSessionStore
+      - path: '/Salesforce/Create Account_1756457414724_orch!system.rstats'
+        type: statsSessionStore
+      - path: '/Salesforce/Create Account_1756457414724_perf!localhost.mstats'
+        type: statsSessionStore
+      - path: '/Salesforce/Create Account_1756457414724_perf!localhost.rstats'
+        type: statsSessionStore
+      - path: '/Salesforce/Create Account_1756457414880.executiondlr'
+        type: statsSessionAsset
+  - name: 'Create Account_1756457414724.xmoebreport'
+  - name: 'Create Account_1756457414724_orch!system.mstats'
+  - name: 'Create Account_1756457414724_orch!system.rstats'
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: 'Create Account_1756457414724_perf!localhost.mstats'
+  - name: 'Create Account_1756457414724_perf!localhost.rstats'
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: 'Create Account_1756457414880.executiondlr'
+  - name: 'Create Account_1756461353645.stats'
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1756461353645
+      tags: 
+      testId: A1F084B50680D9A0E4CDB63037303239
+      testName: 'Create Account'
+    dependencies: 
+      - path: '/Salesforce/Create Account.testsuite'
+        type: statsSessionTest
+      - path: '/Salesforce/Create Account_1756461353645.xmoebreport'
+        type: statsSessionAsset
+      - path: '/Salesforce/Create Account_1756461353645_orch!system.mstats'
+        type: statsSessionStore
+      - path: '/Salesforce/Create Account_1756461353645_orch!system.rstats'
+        type: statsSessionStore
+      - path: '/Salesforce/Create Account_1756461353645_perf!localhost.mstats'
+        type: statsSessionStore
+      - path: '/Salesforce/Create Account_1756461353645_perf!localhost.rstats'
+        type: statsSessionStore
+      - path: '/Salesforce/Create Account_1756461353803.executiondlr'
+        type: statsSessionAsset
+  - name: 'Create Account_1756461353645.xmoebreport'
+  - name: 'Create Account_1756461353645_orch!system.mstats'
+  - name: 'Create Account_1756461353645_orch!system.rstats'
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: 'Create Account_1756461353645_perf!localhost.mstats'
+  - name: 'Create Account_1756461353645_perf!localhost.rstats'
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: 'Create Account_1756461353803.executiondlr'
+  - name: 'Create Account_1756461527268.stats'
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1756461527268
+      tags: 
+      testId: A1F084B50680D9A0E4CDB63037303239
+      testName: 'Create Account'
+    dependencies: 
+      - path: '/Salesforce/Create Account.testsuite'
+        type: statsSessionTest
+      - path: '/Salesforce/Create Account_1756461527268.xmoebreport'
+        type: statsSessionAsset
+      - path: '/Salesforce/Create Account_1756461527268_orch!system.mstats'
+        type: statsSessionStore
+      - path: '/Salesforce/Create Account_1756461527268_orch!system.rstats'
+        type: statsSessionStore
+      - path: '/Salesforce/Create Account_1756461527268_perf!localhost.mstats'
+        type: statsSessionStore
+      - path: '/Salesforce/Create Account_1756461527268_perf!localhost.rstats'
+        type: statsSessionStore
+      - path: '/Salesforce/Create Account_1756461527420.executiondlr'
+        type: statsSessionAsset
+  - name: 'Create Account_1756461527268.xmoebreport'
+  - name: 'Create Account_1756461527268_orch!system.mstats'
+  - name: 'Create Account_1756461527268_orch!system.rstats'
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: 'Create Account_1756461527268_perf!localhost.mstats'
+  - name: 'Create Account_1756461527268_perf!localhost.rstats'
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: 'Create Account_1756461527420.executiondlr'
+  - name: Sales(2).recdata
+  - name: Sales(2).recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Salesforce/Sales(2).recdata
+        type: recsessionRecdata
+  - name: Sales.testsuite
+    missing: true
+  - name: Sales_1756457186214.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1756457186214
+      tags: 
+      testId: A1F084B48E594480E4CDB63037303239
+      testName: Sales
+    dependencies: 
+      - path: /Salesforce/Sales_1756457186214.xmoebreport
+        type: statsSessionAsset
+      - path: /Salesforce/Sales_1756457186214_orch!system.mstats
+        type: statsSessionStore
+      - path: /Salesforce/Sales_1756457186214_orch!system.rstats
+        type: statsSessionStore
+      - path: /Salesforce/Sales_1756457186214_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /Salesforce/Sales_1756457186214_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /Salesforce/Sales_1756457186850.executiondlr
+        type: statsSessionAsset
+  - name: Sales_1756457186214.xmoebreport
+  - name: Sales_1756457186214_orch!system.mstats
+  - name: Sales_1756457186214_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: Sales_1756457186214_perf!localhost.mstats
+  - name: Sales_1756457186214_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: Sales_1756457186850.executiondlr
+  - name: 'dropdown box.recdata'
+  - name: 'dropdown box.recsession'
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: '/Salesforce/dropdown box.recdata'
+        type: recsessionRecdata
+  - name: 'dropdown box.testsuite'
+    missing: true
+  - name: 'dropdown box_1756458398867.stats'
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1756458398867
+      tags: 
+      testId: A1F084B70B9F8290E4CDB63037303239
+      testName: 'dropdown box'
+    dependencies: 
+      - path: '/Salesforce/dropdown box_1756458398867.xmoebreport'
+        type: statsSessionAsset
+      - path: '/Salesforce/dropdown box_1756458398867_orch!system.mstats'
+        type: statsSessionStore
+      - path: '/Salesforce/dropdown box_1756458398867_orch!system.rstats'
+        type: statsSessionStore
+      - path: '/Salesforce/dropdown box_1756458398867_perf!localhost.mstats'
+        type: statsSessionStore
+      - path: '/Salesforce/dropdown box_1756458398867_perf!localhost.rstats'
+        type: statsSessionStore
+      - path: '/Salesforce/dropdown box_1756458399092.executiondlr'
+        type: statsSessionAsset
+  - name: 'dropdown box_1756458398867.xmoebreport'
+  - name: 'dropdown box_1756458398867_orch!system.mstats'
+  - name: 'dropdown box_1756458398867_orch!system.rstats'
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: 'dropdown box_1756458398867_perf!localhost.mstats'
+  - name: 'dropdown box_1756458398867_perf!localhost.rstats'
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: 'dropdown box_1756458399092.executiondlr'
+  - name: esforce_com_e2b.ma
+    type: moeb.applicationPackage
+  - name: 'salesforce logins.csv'
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: '/Salesforce/salesforce logins.csv.metadata'
+        type: datasetMetadata
+  - name: 'salesforce logins.csv.metadata'
+  - name: src
+    resources: 
+      - name: test
+        resources: 
+          - name: Create_Account_Test_A1F084B50680D9A0E4CDB63037303239.java
+            type: com.ibm.rational.test.lt.generatedCode
+          - name: Dropdown_box_Test_A1F084B70B9F8290E4CDB63037303239.java
+            type: com.ibm.rational.test.lt.generatedCode
+          - name: Sales_Test_A1F084B48E594480E4CDB63037303239.java
+            type: com.ibm.rational.test.lt.generatedCode
